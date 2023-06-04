@@ -1,0 +1,45 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Game</h1>
+    <div class="row">
+        <div class="col-8">
+            <form #form="ngForm" (ngSubmit)="addGame()">
+                <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" 
+                  name="title" [(ngModel)]="addGameRequest.title">
+                </div>
+                <div class="mb-3">
+                  <label for="desc" class="form-label">Description</label>
+                  <input type="text" class="form-control" id="desc"
+                  name="description" [(ngModel)]="addGameRequest.description">
+                </div>
+                <div class="mb-3">
+                  <label for="genre" class="form-label">Genres</label>
+                  <input type="text" class="form-control" id="genre"
+                  name="genre" [(ngModel)]="addGameRequest.genres">
+                </div>
+                <div class="mb-3">
+                  <label for="platform" class="form-label">Platforms</label>
+                  <input type="text" class="form-control" id="platforms"
+                  name="platforms" [(ngModel)]="addGameRequest.platforms">
+                </div>
+                <div class="mb-3">
+                  <label for="devs" class="form-label">Developers</label>
+                  <input type="text" class="form-control" id="developers"
+                  name="developers" [(ngModel)]="addGameRequest.developers">
+                </div>
+                <div class="mb-3">
+                  <label for="publisher" class="form-label">Publisher</label>
+                  <input type="text" class="form-control" id="publisher"
+                  name="publisher" [(ngModel)]="addGameRequest.publisher">
+                </div>
+                <div class="mb-3">
+                  <label for="cost" class="form-label">Cost</label>
+                  <input type="number" class="form-control" id="cost"
+                  name="cost" [(ngModel)]="addGameRequest.cost">
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+        </div>
+    </div>
+</div>

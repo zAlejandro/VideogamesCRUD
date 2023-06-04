@@ -1,0 +1,28 @@
+<div class="container my-S">
+    <h1 class="mb-3">Games</h1>
+    <table class="table" *ngIf="games && games.length > 0">
+        <thead>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Genre(s)</th>
+            <th>Platform(s)</th>
+            <th>Developer(s)</th>
+            <th>Publisher</th>
+            <th>Cost</th>
+            <th> </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let game of games">
+                <td>{{game.title}}</td>
+                <td>{{game.description}}</td>
+                <td>{{game.genres}}</td>
+                <td>{{game.platforms}}</td>
+                <td>{{game.developers}}</td>
+                <td>{{game.publisher}}</td>
+                <td>{{game.cost}}</td>
+                <td><a [routerLink]="['/Games','edit', game.id]">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!games || games.length <= 0">No games found</p>
+</div>
