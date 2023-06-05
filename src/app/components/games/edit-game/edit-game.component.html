@@ -1,51 +1,59 @@
-<div class="container my-5">
-    <h1 class="mb-3">Edit Game</h1>
-    <div class="row">
-        <div class="col-8">
-            <form #form="ngForm" (ngSubmit)="updateGame()">
-                <div class="mb-3">
-                  <label for="title" class="form-label">ID</label>
-                  <input type="text" class="form-control" id="id" readonly
-                  name="id" [(ngModel)]="gameDetails.id">
-                </div>
-                <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" 
-                  name="title" [(ngModel)]="gameDetails.title">
-                </div>
-                <div class="mb-3">
-                  <label for="desc" class="form-label">Description</label>
-                  <input type="text" class="form-control" id="desc"
-                  name="description" [(ngModel)]="gameDetails.description">
-                </div>
-                <div class="mb-3">
-                  <label for="genre" class="form-label">Genres</label>
-                  <input type="text" class="form-control" id="genre"
-                  name="genre" [(ngModel)]="gameDetails.genres">
-                </div>
-                <div class="mb-3">
-                  <label for="platform" class="form-label">Platforms</label>
-                  <input type="text" class="form-control" id="platforms"
-                  name="platforms" [(ngModel)]="gameDetails.platforms">
-                </div>
-                <div class="mb-3">
-                  <label for="devs" class="form-label">Developers</label>
-                  <input type="text" class="form-control" id="developers"
-                  name="developers" [(ngModel)]="gameDetails.developers">
-                </div>
-                <div class="mb-3">
-                  <label for="publisher" class="form-label">Publisher</label>
-                  <input type="text" class="form-control" id="publisher"
-                  name="publisher" [(ngModel)]="gameDetails.publisher">
-                </div>
-                <div class="mb-3">
-                  <label for="cost" class="form-label">Cost</label>
-                  <input type="number" class="form-control" id="cost"
-                  name="cost" [(ngModel)]="gameDetails.cost">
-                </div>
-                <button type="submit" class="btn btn-primary">Save</button>
-                <button type="button" class="btn btn-danger m-3" (click)="deleteGame(gameDetails.id)">Delete</button>
-              </form>
-        </div>
-    </div>
+<div class="container">
+  <div class="container bg-dark text-light rounded p-3 mb-1" style="width: 67%;">
+    <h1 class="text-center">Edit Game</h1>
+  </div>
+</div>
+<div class="container my-S align-middle">
+  <div class="p-2">
+      <div class="row">
+          <div class="col-8 p-5 container bg-dark text-light rounded">
+              <form #form="ngForm" (ngSubmit)="updateGame()">
+                  <div class="mb-3">
+                    <label for="title" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="id" readonly
+                    name="id" [(ngModel)]="gameDetails.id">
+                  </div>
+                  <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" 
+                    name="title" [(ngModel)]="gameDetails.title">
+                  </div>
+                  <div class="mb-3">
+                    <label for="desc" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="desc"
+                    name="description" [(ngModel)]="gameDetails.description">
+                  </div>
+                  <div class="mb-3">
+                    <label for="genre" class="form-label">Genres</label>
+                    <input type="text" class="form-control" id="genre"
+                    name="genre" [(ngModel)]="gameDetails.genres">
+                  </div>
+                  <div class="mb-3">
+                    <label for="platform" class="form-label">Platforms</label>
+                    <input type="text" class="form-control" id="platforms"
+                    name="platforms" [(ngModel)]="gameDetails.platforms">
+                  </div>
+                  <div class="mb-3">
+                    <label for="devs" class="form-label">Developers</label>
+                    <input type="text" class="form-control" id="developers"
+                    name="developers" [(ngModel)]="gameDetails.developers">
+                  </div>
+                  <div class="mb-3">
+                    <label for="publisher" class="form-label">Publisher</label>
+                    <input type="text" class="form-control" id="publisher"
+                    name="publisher" [(ngModel)]="gameDetails.publisher">
+                  </div>
+                  <div class="mb-5">
+                    <label for="cost" class="form-label">Cost</label>
+                    <input type="number" class="form-control" id="cost"
+                    name="cost" [(ngModel)]="gameDetails.cost">
+                  </div>
+                  <div class="container d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-danger mx-3" (click)="deleteGame(gameDetails.id)">Delete</button>
+                  </div>
+                </form>
+          </div>
+      </div>
+  </div>
 </div>

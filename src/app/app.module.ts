@@ -7,14 +7,16 @@ import { GamesListComponent } from './components/games/games-list/games-list.com
 import { HttpClientModule } from '@angular/common/http';
 import { AddGamesComponent } from './components/games/add-games/add-games.component';
 import {FormsModule} from '@angular/forms';
-import { EditGameComponent } from './components/games/edit-game/edit-game.component'
+import { EditGameComponent } from './components/games/edit-game/edit-game.component';
+import { HomeComponent } from './components/games/home/home.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     GamesListComponent,
     AddGamesComponent,
-    EditGameComponent
+    EditGameComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
